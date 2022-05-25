@@ -1,0 +1,344 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+
+#headere {
+    background-color: red;
+    display: flex;
+    position: fixed;
+    z-index: 11;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 15vh;
+}
+
+#headere .headText {
+    position: absolute;
+    max-height: 120px;
+    z-index: 1000;
+    color: black;
+}
+#headere .headText h1{
+    text-align: center;
+    color: black;
+}
+#headere .headText p{
+    display: none;
+}
+#header {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 15vh;
+	width: 100vw;
+	height: 10vw;
+    min-height: 8vh;
+}
+
+#header .nav-bar {
+    max-width: 1300px;
+    padding: 0 10px;
+    margin: auto;
+    display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+}
+#header .brand {
+    margin-left: 20px;
+}
+#header .nav-list ul {
+	top: 0;
+	position: absolute;
+	background-color: blue;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    list-style: none;
+	left: 100%;
+	align-items: center;
+	z-index: 1;
+}
+#header .nav-list ul a {
+	color: black;
+	text-transform: uppercase;
+	padding: 20px;
+	font-size: 15px;
+	text-decoration: none;
+	display: block;
+}
+#header .nav-list ul a::after {
+	content: attr(data-after);
+	color: yellow;
+	font-size: 13rem;
+	letter-spacing: 50px;
+	z-index: -1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+#header .zlobrimajivrstvy {
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	border: 3px solid white;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	cursor: pointer;
+	transform: scale(0.8);
+	margin-right: 20px;
+}
+#header .zlobrimajivrstvy:after {
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border: 3px solid white;
+	animation: hamburger_puls 1s ease infinite;
+}
+#header .zlobrimajivrstvy .bar {
+	height: 2px;
+	width: 30px;
+	position: relative;
+	background-color: white;
+	z-index: -1;
+}
+#header .zlobrimajivrstvy .bar::after,
+#header .zlobrimajivrstvy .bar::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: white;
+}
+#header .zlobrimajivrstvy .bar::after {
+	top: 8px;
+}
+#header .zlobrimajivrstvy .bar::before {
+	bottom: 8px;
+}
+#header .zlobrimajivrstvy.active .bar::before {
+	bottom: 0;
+}
+#header .zlobrimajivrstvy.active .bar::after {
+	top: 0;
+}
+#main {
+    padding-top: 21vh;
+    display: flex;
+    width: 100vw;
+}
+#main .content{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-items: center;
+    padding: 50px;
+}
+#main .contentProvider {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    justify-content: center;
+}
+#main .contentProvider h1 {
+    margin-top: 15px;
+    align-self: center;
+}
+#main .contentProvider p {
+    margin-top: 15px;
+}
+#main .contentProvider img {
+    width: 100%;
+}
+#main .contentText {
+    margin: 50px;
+}
+#main .formLetiste {
+    margin: 15px 0;
+    width: 314px;
+    padding: 30px;
+}
+#main .zobrazMapu {
+    color: #EB2226;
+    text-decoration: none;
+    margin-top: 20px;
+    display: block;
+}
+#main .kolaz {  display: grid;
+    margin: auto;
+    width: 100%;
+
+
+    aspect-ratio: 688/1776;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d";
+}  
+#main .imgA {
+    grid-area: a;
+    background-image: url('./assets/avion_1.jpg');
+    background-size: cover;
+}
+#main .imgB {
+    grid-area: b;
+    background-image: url('./assets/Boeing.jpg');
+    background-size: cover;
+}  
+#main .imgC {
+    grid-area: c;
+    background-image: url('./assets/embraer.jpg');
+    background-size: cover;
+}  
+#main .imgD {
+    grid-area: d;
+    background-image: url('./assets/tupolev.jpg');
+    background-size: cover;
+}  
+#main .sideMenu {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 15vw;
+    min-width: 150px;
+    background-color: blue;
+}
+#main .sideMenu img{
+    width: 100%;
+    min-width: 150px;
+    height: auto;  
+}
+#footer {
+    width: 100vw;
+    min-height: 15vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: turquoise;
+}
+#footer p{
+    color: black;
+    
+}
+@media only screen and (min-width: 700px) {   
+    #footer {
+        flex-direction: row;
+    }
+    #footer .videPlayer {
+        margin-top: 40px;
+    }
+    #main .sideMenu {
+        display: flex;
+    }
+    #main .content {
+        width: 85vw;
+    }
+    #headere .headText p{
+        display: block;
+    }
+    #main .kolaz {  display: grid;
+        margin: auto;
+        width: 100%;
+        max-height: 444px;
+        max-width: 688px;
+        aspect-ratio: 688/444;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "a b "
+          "c d ";
+    }  
+    #main .imgA {
+        grid-area: a;
+        background-image: url('./assets/airbus.jpg');
+        background-size: cover;
+    }
+    #main .imgB {
+        grid-area: b;
+        background-image: url('./assets/Boeing.jpg');
+        background-size: cover;
+    }  
+    #main .imgC {
+        grid-area: c;
+        background-image: url('./assets/ctyrka.jpg');
+        background-size: cover;
+    }  
+    #main .imgD {
+        grid-area: d;
+        background-image: url('./assets/embraer.jpg');
+        background-size: cover;
+    } 
+}
+@media only screen and (min-width: 1100px) {
+    /* header */
+	#header .zlobrimajivrstvy {
+		display: none;
+	}
+	#header .nav-list ul {
+		position: initial;
+		display: block;
+		height: auto;
+		width: fit-content;
+		background-color: transparent;
+	}
+	#header .nav-list ul li {
+		display: inline-block;
+	}
+	#header .nav-list ul li a {
+		font-size: 16px;
+	}
+	#header .nav-list ul a:after {
+		display: none;
+	}
+	/* End header */
+}
+@media only screen and (min-width: 1200px) {
+    /* header */
+	#header .zlobrimajivrstvy {
+		display: none;
+	}
+	#header .nav-list ul {
+		position: initial;
+		display: block;
+		height: auto;
+		width: fit-content;
+		background-color: transparent;
+	}
+	#header .nav-list ul li {
+		display: inline-block;
+	}
+	#header .nav-list ul li a {
+		font-size: 16px;
+	}
+	#header .nav-list ul a:after {
+		display: none;
+	}
+	/* End header */
+}
